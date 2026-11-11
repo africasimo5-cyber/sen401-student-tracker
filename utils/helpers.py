@@ -5,21 +5,13 @@
 def highest_score(student_list):
     if not student_list:
         return None
-    best = student_list[0]
-    for s in student_list:
-        if s["score"] > best["score"]:
-            best = s
-    return best
+    return max(student_list, key=lambda s: s.score)
 
 
 def lowest_score(student_list):
     if not student_list:
         return None
-    worst = student_list[0]
-    for s in student_list:
-        if s["score"] < worst["score"]:
-            worst = s
-    return worst
+    return min(student_list, key=lambda s: s.score)
 
 
 def grade(score):

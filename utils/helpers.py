@@ -3,6 +3,8 @@
 
 
 def highest_score(student_list):
+    if not student_list:
+        return None
     best = student_list[0]
     for s in student_list:
         if s["score"] > best["score"]:
@@ -11,6 +13,8 @@ def highest_score(student_list):
 
 
 def lowest_score(student_list):
+    if not student_list:
+        return None
     worst = student_list[0]
     for s in student_list:
         if s["score"] < worst["score"]:
@@ -27,4 +31,6 @@ def grade(score):
         return "C"
     elif score >= 45:
         return "D"
+    elif score >= 40:
+        return "E"
     return "F"

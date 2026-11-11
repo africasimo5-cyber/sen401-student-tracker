@@ -8,6 +8,9 @@ from utils.helpers import highest_score, lowest_score, grade
 def main():
     print("=== Student Score Tracker ===")
     students = get_students()
+    if not students:
+        print("No students to show.")
+        return
     print_students(students)
 
     top = highest_score(students)

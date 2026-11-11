@@ -19,6 +19,8 @@ def add_student(name, score):
 
 
 def average_score(student_list):
+    if len(student_list) == 0:
+        return 0
     total = 0
     for s in student_list:
         total = total + s["score"]
